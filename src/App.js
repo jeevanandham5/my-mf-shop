@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+//shop-app
+import React from "react";
+import Styles from "./App.module.css";
 
-function App() {
+function App({ count }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={Styles.main}>
+      <div className={Styles.box}>
+        <h1>Shop App </h1>
+        <p>Welcome to the shop! yes iam here</p>
+        <div className="d-flex gap-5">
+          <p>items in the cart : </p> <p> {count || "  no Items"}</p>
+        </div>
+      </div>
     </div>
   );
 }
