@@ -5,6 +5,7 @@ const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
+  //mode: "production",
   mode: "development",
   devServer: {
     static: path.join(__dirname, "public"),
@@ -13,7 +14,6 @@ module.exports = {
   output: {
     publicPath: "auto",
     path: path.resolve(__dirname, "build"),
-    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -44,7 +44,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "shop",
-      filename: "shopRemoteEntry.js",
+      filename: "remoteEntry.js",
       exposes: {
         "./ShopApp": "./src/App",
       },
