@@ -13,7 +13,7 @@ module.exports = {
   output: {
     publicPath: "auto",
     path: path.resolve(__dirname, "shop-build"),
-    filename: "remoteEntry.js",
+    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -44,7 +44,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "shop",
-      filename: "remoteEntry.js",
+      filename: "shopRemoteEntry.js",
       exposes: {
         "./ShopApp": "./src/App",
       },
