@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 .box {
   background: #2c6cee;
