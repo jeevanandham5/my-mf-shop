@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     publicPath: "auto",
-    path: path.resolve(__dirname, "shop-build"),
+    path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
   },
   module: {
