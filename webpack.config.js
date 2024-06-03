@@ -46,9 +46,22 @@ module.exports = {
       exposes: {
         "./ShopApp": "./src/App",
       },
+      shared: {
+        react: {
+          singleton: true,
+
+          requiredVersion: require("./package.json").dependencies.react,
+        },
+        "react-dom": {
+          singleton: true,
+
+          requiredVersion: require("./package.json").dependencies["react-dom"],
+        },
+      },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
   ],
+  stats: "verbose",
 };
