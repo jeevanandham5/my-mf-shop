@@ -12,6 +12,8 @@ module.exports = {
   },
   output: {
     publicPath: "auto",
+    path: path.resolve(__dirname, "build"),
+    filename: "main.bundle.js",
   },
   module: {
     rules: [
