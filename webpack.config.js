@@ -12,8 +12,8 @@ module.exports = {
   },
   output: {
     publicPath: "auto",
-    path: path.resolve(__dirname, "build"),
-    filename: "main.bundle.js",
+    path: path.resolve(__dirname, "shop-build"),
+    filename: "remoteEntry.js",
   },
   module: {
     rules: [
