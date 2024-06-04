@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Styles from "./App.module.css";
 import Confetti from "react-confetti";
+import "./index.css";
 
 function App({ count }) {
   const [triggered, settriggered] = useState(false);
@@ -26,6 +27,7 @@ function App({ count }) {
         <div className={Styles.box}>
           <h1 className="m-0">Shop App</h1>
           <p className="m-0">Welcome to the Shop!</p>
+          <p className="text-danger">test</p>
           <button className="btn btn-info" onClick={handleTrigger}>
             🎉
           </button>
@@ -39,7 +41,7 @@ function App({ count }) {
       {popup && (
         <div className={Styles.popup}>
           <div className="card p-5 d-flex align-items-center justify-content-center">
-            <h1 className="m-0">Iam from Shopapp</h1>
+            <h1>Iam from Shopapp</h1>
           </div>
         </div>
       )}
