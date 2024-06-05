@@ -27,7 +27,7 @@ function App({ count }) {
         <div className={Styles.box}>
           <h1 className="m-0">Shop App</h1>
           <p className="m-0">Welcome to the Shop!</p>
-          <p className="text-danger">test</p>
+
           <button className="btn btn-info" onClick={handleTrigger}>
             🎉
           </button>
