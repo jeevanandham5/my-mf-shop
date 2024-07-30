@@ -34,10 +34,17 @@ function App({ count }) {
           {triggered && <Confetti />}
 
           <div className="d-flex align-items-center justify-content-center gap-5">
-            {count}
+            count: {count ? count : 0}
           </div>
         </div>
+        <button
+          className="bg-accent text-white m-5 px-4 py-2 rounded-md"
+          onClick={handlePopup}
+        >
+          Popup
+        </button>
       </div>
+
       {popup && (
         <div className={Styles.popup}>
           <div className="card p-5 d-flex align-items-center justify-content-center">
@@ -45,10 +52,6 @@ function App({ count }) {
           </div>
         </div>
       )}
-
-      <button className="btn btn-danger m-5" onClick={handlePopup}>
-        popup
-      </button>
     </>
   );
 }
