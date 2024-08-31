@@ -2,7 +2,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
-const isProduction = process.env.NODE_ENV === "production";
+//const isProduction = process.env.NODE_ENV === "production";
+const isProduction = true;
 module.exports = {
   entry: "./src/index.js",
   mode: isProduction ? "production" : "development",
